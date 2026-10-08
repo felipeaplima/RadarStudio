@@ -2,6 +2,10 @@
 
 All notable changes to RadarStudio.
 
+## 1.4 — 2026-10-08
+
+- **Display timer for serves.** New field in the Serve marker box: choose how many seconds a serve speed stays on the display, the OBS overlay and the phone scoreboard before going back to "…" (waiting for the next serve). Set it to 0 to keep the last serve on screen until the next one, as before.
+
 ## 1.3 — 2026-10-07
 
 - **Serve mark over the network.** Press **S** on the DataVolley PC and the radar PC captures that serve, so the OBS overlay shows **only serve speeds** instead of every reading. Turn on **"accept serve mark from network"** on the radar PC (Serve marker section). The serve is captured at the source for accuracy, with a short look-back so a slightly late signal still catches it. Your **S** still marks locally for DataVolley.
