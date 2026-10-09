@@ -158,6 +158,14 @@
     .shot .shot-img,.shot:nth-child(even) .shot-img{order:1}
     .shot .shot-txt,.shot:nth-child(even) .shot-txt{order:2}}
 
+  /* POST-BUY */
+  .postbuy{max-width:440px;margin:18px auto 0;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:2px 18px}
+  .postbuy summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none;color:var(--text);font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .postbuy summary::-webkit-details-marker{display:none}
+  .postbuy summary::after{content:'+';color:var(--accent);font-size:20px;font-weight:400}
+  .postbuy[open] summary::after{content:'−'}
+  .postbuy .trial-form{border:none;background:none;padding:0 0 16px}
+
   /* FOOT */
   footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:13.5px}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
@@ -341,6 +349,17 @@
     <p class="pay-note" style="margin-top:14px">Not sure yet? <a href="#trial">Try it free for 7 days</a> first.</p>
     <p class="pay-note">After your payment is confirmed, you'll get your activation code by email (usually within a few hours). Questions? <a href="mailto:Felipeaplima@outlook.com">Contact us</a>.</p>
   </div>
+  <details class="postbuy">
+    <summary>✅ Already paid? Get your activation code</summary>
+    <form class="trial-form" id="buyForm">
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Club / team<input name="club" required></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>WhatsApp<input name="phone" autocomplete="tel"></label>
+      <button type="submit" class="btn btn-primary">Send my details</button>
+      <div class="form-msg" id="buyMsg"></div>
+    </form>
+  </details>
 </div></section>
 
 <section id="faq"><div class="wrap">
@@ -397,6 +416,23 @@ if(tf) tf.addEventListener('submit',function(e){
     .catch(()=>{ msg.className='form-msg err';
       msg.textContent='Something went wrong — email Felipeaplima@outlook.com.'; })
     .finally(()=>{ btn.disabled=false; btn.textContent='Get my free trial'; });
+});
+
+/* Post-purchase: buyer sends details so we can email the activation code */
+const bf=document.getElementById('buyForm');
+if(bf) bf.addEventListener('submit',function(e){
+  e.preventDefault();
+  const msg=document.getElementById('buyMsg');
+  const btn=bf.querySelector('button[type=submit]');
+  const fd=new FormData(bf);
+  const payload=JSON.stringify({action:'lead',type:'purchase',name:fd.get('name'),club:fd.get('club'),
+    email:fd.get('email'),phone:fd.get('phone'),lang:'en',ts:new Date().toISOString()});
+  if(!LEAD_URL||LEAD_URL.indexOf('PASTE_')===0){ msg.className='form-msg err'; msg.textContent='Form not configured yet.'; return; }
+  btn.disabled=true; btn.textContent='Sending…'; msg.className='form-msg'; msg.textContent='';
+  fetch(LEAD_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:payload})
+    .then(()=>{ msg.className='form-msg ok'; msg.textContent="Thanks! We'll email your activation code shortly."; bf.reset(); })
+    .catch(()=>{ msg.className='form-msg err'; msg.textContent='Something went wrong — email Felipeaplima@outlook.com.'; })
+    .finally(()=>{ btn.disabled=false; btn.textContent='Send my details'; });
 });
 </script>
 </body>

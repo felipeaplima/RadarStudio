@@ -158,6 +158,14 @@
     .shot .shot-img,.shot:nth-child(even) .shot-img{order:1}
     .shot .shot-txt,.shot:nth-child(even) .shot-txt{order:2}}
 
+  /* POST-BUY */
+  .postbuy{max-width:440px;margin:18px auto 0;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:2px 18px}
+  .postbuy summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none;color:var(--text);font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .postbuy summary::-webkit-details-marker{display:none}
+  .postbuy summary::after{content:'+';color:var(--accent);font-size:20px;font-weight:400}
+  .postbuy[open] summary::after{content:'−'}
+  .postbuy .trial-form{border:none;background:none;padding:0 0 16px}
+
   /* FOOT */
   footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:13.5px}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
@@ -336,6 +344,17 @@
     <p class="pay-note" style="margin-top:14px">Non sei ancora sicuro? <a href="#trial">Prova gratis per 7 giorni</a>.</p>
     <p class="pay-note">Dopo la conferma del pagamento riceverai il codice di attivazione via email (di solito in poche ore). Domande? <a href="mailto:Felipeaplima@outlook.com">Scrivici</a>.</p>
   </div>
+  <details class="postbuy">
+    <summary>✅ Hai già pagato? Ricevi il codice di attivazione</summary>
+    <form class="trial-form" id="buyForm">
+      <label>Il tuo nome<input name="name" required autocomplete="name"></label>
+      <label>Club / squadra<input name="club" required></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>WhatsApp<input name="phone" autocomplete="tel"></label>
+      <button type="submit" class="btn btn-primary">Invia i miei dati</button>
+      <div class="form-msg" id="buyMsg"></div>
+    </form>
+  </details>
 </div></section>
 
 <section id="faq"><div class="wrap">
@@ -390,6 +409,23 @@ if(tf) tf.addEventListener('submit',function(e){
     .catch(()=>{ msg.className='form-msg err';
       msg.textContent='Qualcosa è andato storto — scrivi a Felipeaplima@outlook.com.'; })
     .finally(()=>{ btn.disabled=false; btn.textContent='Richiedi la prova gratuita'; });
+});
+
+/* Post-acquisto: l'acquirente invia i dati per ricevere il codice di attivazione */
+const bf=document.getElementById('buyForm');
+if(bf) bf.addEventListener('submit',function(e){
+  e.preventDefault();
+  const msg=document.getElementById('buyMsg');
+  const btn=bf.querySelector('button[type=submit]');
+  const fd=new FormData(bf);
+  const payload=JSON.stringify({action:'lead',type:'purchase',name:fd.get('name'),club:fd.get('club'),
+    email:fd.get('email'),phone:fd.get('phone'),lang:'it',ts:new Date().toISOString()});
+  if(!LEAD_URL||LEAD_URL.indexOf('PASTE_')===0){ msg.className='form-msg err'; msg.textContent='Modulo non ancora configurato.'; return; }
+  btn.disabled=true; btn.textContent='Invio…'; msg.className='form-msg'; msg.textContent='';
+  fetch(LEAD_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:payload})
+    .then(()=>{ msg.className='form-msg ok'; msg.textContent='Grazie! Ti invieremo a breve il codice di attivazione.'; bf.reset(); })
+    .catch(()=>{ msg.className='form-msg err'; msg.textContent='Qualcosa è andato storto — scrivi a Felipeaplima@outlook.com.'; })
+    .finally(()=>{ btn.disabled=false; btn.textContent='Invia i miei dati'; });
 });
 </script>
 </body>
