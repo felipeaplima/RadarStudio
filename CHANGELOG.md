@@ -2,6 +2,10 @@
 
 All notable changes to RadarStudio.
 
+## 1.6 — 2026-10-09
+
+- **New "Hall" overlay.** A "Last serve: XXX km/h" overlay card for OBS (📺 Hall button) that uses your chosen colors (Text/Bg), with the label in uppercase. Two styles — **horizontal** (single line) or **vertical** (big number) — in English, Portuguese and Italian. Pick the style and language in the pop-up and copy the URL.
+
 ## 1.5 — 2026-10-08
 
 - **VolleyStation support.** The serve-speed page — now **DV/VS Sync** — also reads VolleyStation `.vsm` files, not just DataVolley `.dvw`. It matches each serve's speed by video time, auto-aligns to your radar (with a one-click "first-serve sync" to pin it when needed), and writes the speed into the CUSTOM field. *(New — still being improved.)*
