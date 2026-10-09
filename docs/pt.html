@@ -146,6 +146,18 @@
   .form-msg{font-size:13.5px;min-height:18px;text-align:center}
   .form-msg.ok{color:var(--accent2)} .form-msg.err{color:#f87171}
 
+  /* SHOWCASE */
+  .showcase{display:grid;gap:44px;max-width:960px;margin:0 auto}
+  .shot{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  .shot .shot-img{order:1} .shot .shot-txt{order:2}
+  .shot:nth-child(even) .shot-img{order:2} .shot:nth-child(even) .shot-txt{order:1}
+  .shot img{width:100%;display:block;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow)}
+  .shot h3{font-size:21px;margin-bottom:8px}
+  .shot p{color:var(--muted);font-size:15.5px}
+  @media(max-width:720px){.shot{grid-template-columns:1fr}
+    .shot .shot-img,.shot:nth-child(even) .shot-img{order:1}
+    .shot .shot-txt,.shot:nth-child(even) .shot-txt{order:2}}
+
   /* FOOT */
   footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:13.5px}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
@@ -191,6 +203,11 @@
           <circle cx="30" cy="21" r="8" fill="#002776"/>
         </svg>
       </a>
+      <a class="flag" href="it.html" title="Italiano" aria-label="Italiano">
+        <svg viewBox="0 0 60 42" xmlns="http://www.w3.org/2000/svg">
+          <rect width="20" height="42" fill="#008c45"/><rect x="20" width="20" height="42" fill="#fff"/><rect x="40" width="20" height="42" fill="#cd212a"/>
+        </svg>
+      </a>
     </span>
     <button class="themebtn" id="themeBtn" onclick="toggleTheme()" aria-label="Claro / escuro" title="Claro / escuro">🌙</button>
     <a href="#buy" class="btn btn-primary">Comprar</a>
@@ -222,7 +239,7 @@
 
 <section id="features"><div class="wrap">
   <div class="sec-head">
-    <h2>Tudo que o radar fala, na sua tela</h2>
+    <h2>Cada velocidade registrada, na sua tela</h2>
     <p>Uma ferramenta, várias saídas — da quadra ao streaming.</p>
   </div>
   <div class="grid">
@@ -235,6 +252,31 @@
   </div>
 </div></section>
 
+<section id="see"><div class="wrap">
+  <div class="sec-head">
+    <h2>Veja em ação</h2>
+    <p>Da tela do ginásio à transmissão, ao scout e ao celular.</p>
+  </div>
+  <div class="showcase">
+    <div class="shot">
+      <div class="shot-img"><img src="img/shot-display.png" alt="Display de velocidade do RadarStudio"></div>
+      <div class="shot-txt"><h3>Na tela grande, ao vivo</h3><p>A velocidade grande e clara — escolha um layout e jogue numa segunda tela ou no telão do ginásio.</p></div>
+    </div>
+    <div class="shot">
+      <div class="shot-img"><img src="img/shot-obs.webp" alt="Velocidade do saque sobreposta na transmissão no OBS"></div>
+      <div class="shot-txt"><h3>Na sua transmissão</h3><p>Um overlay transparente coloca a velocidade do saque direto no seu OBS.</p></div>
+    </div>
+    <div class="shot">
+      <div class="shot-img"><img src="img/shot-phone.png" alt="Placar de velocidade no celular"></div>
+      <div class="shot-txt"><h3>Em qualquer celular ou tablet</h3><p>Abra o placar em qualquer aparelho da mesma rede — sem instalar, é só um link.</p></div>
+    </div>
+    <div class="shot">
+      <div class="shot-img"><img src="img/shot-scout.png" alt="Página DV/VS Sync gravando as velocidades no scout"></div>
+      <div class="shot-txt"><h3>Direto no seu scout</h3><p>Casa a velocidade de cada saque por tempo e grava no seu arquivo do DataVolley ou VolleyStation — automaticamente.</p></div>
+    </div>
+  </div>
+</div></section>
+
 <section id="how" class="alt"><div class="wrap">
   <div class="sec-head">
     <h2>Funciona em 3 passos</h2>
@@ -243,7 +285,7 @@
   <div class="steps">
     <div class="step"><h3>Conecte o radar</h3><p>Ligue o Pocket Radar ao computador por USB, Bluetooth ou rede. O RadarStudio reconhece sozinho.</p></div>
     <div class="step"><h3>Escolha a saída</h3><p>Exibição na tela, overlay no OBS, placar no celular ou registro no seu programa de scouting — ou tudo ao mesmo tempo.</p></div>
-    <div class="step"><h3>Jogue</h3><p>Cada saque aparece na hora. O guia embutido (PT e EN) ensina cada detalhe.</p></div>
+    <div class="step"><h3>Play</h3><p>Cada saque aparece na hora. O guia embutido (PT e EN) ensina cada detalhe.</p></div>
   </div>
 </div></section>
 

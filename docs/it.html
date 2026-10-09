@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RadarStudio — serve speed for volleyball</title>
-<meta name="description" content="RadarStudio reads your Pocket Radar Smart Coach and shows serve speed on screen, on your stream (OBS) and in your scouting software, in real time.">
+<title>RadarStudio — velocità di battuta per la pallavolo</title>
+<meta name="description" content="RadarStudio legge il tuo Pocket Radar Smart Coach e mostra la velocità della battuta sullo schermo, nella diretta (OBS) e nel tuo software di scouting, in tempo reale.">
 <style>
   :root{  /* claro (padrão) */
     --bg:#f6f9fc; --bg2:#eef3f9; --panel:#ffffff; --panel2:#f2f6fb;
@@ -181,13 +181,13 @@
     Radar<span>Studio</span>
   </div>
   <div class="navlinks">
-    <a href="#features">Features</a>
-    <a href="#how">How it works</a>
-    <a href="#trial">Free trial</a>
+    <a href="#features">Funzioni</a>
+    <a href="#how">Come funziona</a>
+    <a href="#trial">Prova gratuita</a>
     <a href="#faq">FAQ</a>
     <a href="https://github.com/felipeaplima/RadarStudio/releases/latest" target="_blank" rel="noopener">Download</a>
     <span class="lang">
-      <a class="flag active" href="index.html" title="English" aria-label="English">
+      <a class="flag" href="index.html" title="English" aria-label="English">
         <svg viewBox="0 0 60 42" xmlns="http://www.w3.org/2000/svg">
           <rect width="60" height="42" fill="#012169"/>
           <path d="M0 0 L60 42 M60 0 L0 42" stroke="#fff" stroke-width="8"/>
@@ -203,34 +203,34 @@
           <circle cx="30" cy="21" r="8" fill="#002776"/>
         </svg>
       </a>
-      <a class="flag" href="it.html" title="Italiano" aria-label="Italiano">
+      <a class="flag active" href="it.html" title="Italiano" aria-label="Italiano">
         <svg viewBox="0 0 60 42" xmlns="http://www.w3.org/2000/svg">
           <rect width="20" height="42" fill="#008c45"/><rect x="20" width="20" height="42" fill="#fff"/><rect x="40" width="20" height="42" fill="#cd212a"/>
         </svg>
       </a>
     </span>
-    <button class="themebtn" id="themeBtn" onclick="toggleTheme()" aria-label="Light / dark" title="Light / dark">🌙</button>
-    <a href="#buy" class="btn btn-primary">Buy</a>
+    <button class="themebtn" id="themeBtn" onclick="toggleTheme()" aria-label="Chiaro / scuro" title="Chiaro / scuro">🌙</button>
+    <a href="#buy" class="btn btn-primary">Acquista</a>
   </div>
 </div></nav>
 
 <header class="hero"><div class="wrap">
   <div>
-    <span class="eyebrow">For volleyball • Pocket Radar Smart Coach</span>
-    <h1>Serve speed <em>on screen, on your stream and in your scouting software.</em></h1>
-    <p class="lead">RadarStudio reads your Pocket Radar in real time and turns every reading into a scoreboard on screen, an OBS overlay and a speed mark in your scouting software — without typing anything.</p>
+    <span class="eyebrow">Per la pallavolo • Pocket Radar Smart Coach</span>
+    <h1>Velocità di battuta <em>sullo schermo, nella diretta e nel tuo software di scouting.</em></h1>
+    <p class="lead">RadarStudio legge il tuo Pocket Radar in tempo reale e trasforma ogni lettura in un tabellone sullo schermo, un overlay per OBS e un dato di velocità nel tuo software di scouting — senza digitare nulla.</p>
     <div class="hero-cta">
-      <a href="#trial" class="btn btn-primary">Try 7 days free</a>
-      <a href="#buy" class="btn btn-ghost">See pricing</a>
+      <a href="#trial" class="btn btn-primary">Prova 7 giorni gratis</a>
+      <a href="#buy" class="btn btn-ghost">Vedi i prezzi</a>
     </div>
-    <div class="hero-note">Windows • annual license • 2 computers • activate with a code</div>
+    <div class="hero-note">Windows • licenza annuale • 2 computer • attivazione con codice</div>
   </div>
   <div class="hero-gal">
     <figure class="gal-card">
-      <img src="img/hero.png" alt="RadarStudio serve-speed overlay on a live match — 114 km/h">
+      <img src="img/hero.png" alt="Overlay della velocità di battuta di RadarStudio in una partita dal vivo — 114 km/h">
     </figure>
     <figure class="gal-card gal-mock">
-      <div class="speed-label">Last serve</div>
+      <div class="speed-label">Ultima battuta</div>
       <div class="speed">98<sub> km/h</sub></div>
       <div class="ministack"><div>94</div><div>91</div><div>97</div></div>
     </figure>
@@ -239,76 +239,76 @@
 
 <section id="features"><div class="wrap">
   <div class="sec-head">
-    <h2>Every speed record, on your screen</h2>
-    <p>One tool, many outputs — from the court to streaming.</p>
+    <h2>Ogni velocità registrata, sul tuo schermo</h2>
+    <p>Uno strumento, tante uscite — dal campo allo streaming.</p>
   </div>
   <div class="grid">
-    <div class="feat"><div class="ic">📡</div><h3>Real-time reading</h3><p>Connects to the Pocket Radar Smart Coach over USB, Bluetooth or network and shows the speed the moment it happens.</p></div>
-    <div class="feat"><div class="ic">🖥️</div><h3>Multiple display layouts</h3><p>Speedometer, scoreboard, pop-up or last speeds stacked. Pick the look and send it to a second screen or the big screen.</p></div>
-    <div class="feat"><div class="ic">🎥</div><h3>OBS overlay</h3><p>A transparent layer ready for streaming, with the option to show only serve speeds.</p></div>
-    <div class="feat"><div class="ic">🏐</div><h3>Scouting software integration</h3><p>Press S and the serve is marked with its speed — even from another computer on the same network. Then just sync with your scouting software and it goes straight into the custom field.</p></div>
-    <div class="feat"><div class="ic">📱</div><h3>Phone scoreboard</h3><p>Open the scoreboard on your phone on the same network and follow from anywhere in the gym.</p></div>
-    <div class="feat"><div class="ic">📈</div><h3>History & records</h3><p>Every reading is saved, with the session record. Delete readings with interference so they don't spoil the ranking.</p></div>
+    <div class="feat"><div class="ic">📡</div><h3>Lettura in tempo reale</h3><p>Si collega al Pocket Radar Smart Coach via USB, Bluetooth o rete e mostra la velocità nell'istante in cui accade.</p></div>
+    <div class="feat"><div class="ic">🖥️</div><h3>Diversi layout di visualizzazione</h3><p>Tachimetro, tabellone, pop-up o ultime velocità in pila. Scegli lo stile e invialo a un secondo schermo o al maxischermo.</p></div>
+    <div class="feat"><div class="ic">🎥</div><h3>Overlay per OBS</h3><p>Un livello trasparente pronto per lo streaming, con l'opzione di mostrare solo le velocità delle battute.</p></div>
+    <div class="feat"><div class="ic">🏐</div><h3>Integrazione con il software di scouting</h3><p>Premi S e la battuta viene registrata con la sua velocità — anche da un altro computer sulla stessa rete. Poi basta sincronizzare con il tuo software di scouting e il dato entra direttamente nel campo custom.</p></div>
+    <div class="feat"><div class="ic">📱</div><h3>Tabellone sul telefono</h3><p>Apri il tabellone sul telefono nella stessa rete e segui da qualsiasi punto del palazzetto.</p></div>
+    <div class="feat"><div class="ic">📈</div><h3>Storico e record</h3><p>Ogni lettura viene salvata, con il record della sessione. Elimina le letture con interferenze così non falsano la classifica.</p></div>
   </div>
 </div></section>
 
 <section id="see"><div class="wrap">
   <div class="sec-head">
-    <h2>See it in action</h2>
-    <p>From the gym screen to your broadcast, your scout and your phone.</p>
+    <h2>Vedila in azione</h2>
+    <p>Dallo schermo del palazzetto alla diretta, al tuo scout e al telefono.</p>
   </div>
   <div class="showcase">
     <div class="shot">
-      <div class="shot-img"><img src="img/shot-display.png" alt="RadarStudio speed display"></div>
-      <div class="shot-txt"><h3>Live on the big screen</h3><p>The speed, big and clear — pick a layout and send it to a second monitor or the gym's screen.</p></div>
+      <div class="shot-img"><img src="img/shot-display.png" alt="Display della velocità di RadarStudio"></div>
+      <div class="shot-txt"><h3>Sullo schermo grande, dal vivo</h3><p>La velocità grande e chiara — scegli un layout e mandalo a un secondo monitor o al maxischermo.</p></div>
     </div>
     <div class="shot">
-      <div class="shot-img"><img src="img/shot-obs.webp" alt="Serve speed overlaid on a live broadcast in OBS"></div>
-      <div class="shot-txt"><h3>On your broadcast</h3><p>A clean, transparent overlay drops the serve speed straight onto your OBS stream.</p></div>
+      <div class="shot-img"><img src="img/shot-obs.webp" alt="Velocità della battuta sovrapposta alla diretta in OBS"></div>
+      <div class="shot-txt"><h3>Nella tua diretta</h3><p>Un overlay trasparente mette la velocità della battuta direttamente nel tuo OBS.</p></div>
     </div>
     <div class="shot">
-      <div class="shot-img"><img src="img/shot-phone.png" alt="Speed scoreboard on a phone"></div>
-      <div class="shot-txt"><h3>On any phone or tablet</h3><p>Open the scoreboard on any device on the same network — no install, just a link.</p></div>
+      <div class="shot-img"><img src="img/shot-phone.png" alt="Tabellone della velocità su un telefono"></div>
+      <div class="shot-txt"><h3>Su qualsiasi telefono o tablet</h3><p>Apri il tabellone su qualsiasi dispositivo sulla stessa rete — niente da installare, solo un link.</p></div>
     </div>
     <div class="shot">
-      <div class="shot-img"><img src="img/shot-scout.png" alt="DV/VS Sync page writing serve speeds into the scout"></div>
-      <div class="shot-txt"><h3>Into your scout</h3><p>Match each serve's speed by time and write it into your DataVolley or VolleyStation file — automatically.</p></div>
+      <div class="shot-img"><img src="img/shot-scout.png" alt="Pagina DV/VS Sync che scrive le velocità nello scout"></div>
+      <div class="shot-txt"><h3>Direttamente nel tuo scout</h3><p>Abbina la velocità di ogni battuta per tempo e la scrive nel tuo file DataVolley o VolleyStation — in automatico.</p></div>
     </div>
   </div>
 </div></section>
 
 <section id="how" class="alt"><div class="wrap">
   <div class="sec-head">
-    <h2>Works in 3 steps</h2>
-    <p>No complicated setup, no typing speeds.</p>
+    <h2>Funziona in 3 passi</h2>
+    <p>Nessuna configurazione complicata, niente velocità da digitare.</p>
   </div>
   <div class="steps">
-    <div class="step"><h3>Connect the radar</h3><p>Plug the Pocket Radar into your computer via USB, Bluetooth or network. RadarStudio detects it automatically.</p></div>
-    <div class="step"><h3>Choose the output</h3><p>On-screen display, OBS overlay, phone scoreboard or a mark in your scouting software — or all at once.</p></div>
-    <div class="step"><h3>Play</h3><p>Every serve shows instantly. The built-in guide (English and Portuguese) walks you through every detail.</p></div>
+    <div class="step"><h3>Collega il radar</h3><p>Collega il Pocket Radar al computer via USB, Bluetooth o rete. RadarStudio lo rileva da solo.</p></div>
+    <div class="step"><h3>Scegli l'uscita</h3><p>Visualizzazione sullo schermo, overlay OBS, tabellone sul telefono o un dato nel tuo software di scouting — o tutto insieme.</p></div>
+    <div class="step"><h3>Gioca</h3><p>Ogni battuta appare all'istante. La guida integrata (inglese e portoghese) ti spiega ogni dettaglio.</p></div>
   </div>
 </div></section>
 
 <section id="trial"><div class="wrap">
   <div class="sec-head">
-    <h2>Try it free for 7 days</h2>
-    <p>Tell us a bit about your team and we'll email you a 7-day activation code — no payment, no card.</p>
+    <h2>Prova gratis per 7 giorni</h2>
+    <p>Raccontaci qualcosa sulla tua squadra e ti invieremo per email un codice di attivazione di 7 giorni — nessun pagamento, nessuna carta.</p>
   </div>
   <div class="trial-grid">
     <div class="trial-copy">
       <ul>
-        <li>Full version, every feature unlocked</li>
-        <li>Works with your own Pocket Radar and scouting software</li>
-        <li>We send your code by email, usually within a few hours</li>
+        <li>Versione completa, tutte le funzioni sbloccate</li>
+        <li>Funziona con il tuo Pocket Radar e il tuo software di scouting</li>
+        <li>Inviamo il codice via email, di solito in poche ore</li>
       </ul>
-      <p class="trial-foot">Ready to buy instead? <a href="#buy">See pricing</a>.</p>
+      <p class="trial-foot">Preferisci acquistare subito? <a href="#buy">Vedi i prezzi</a>.</p>
     </div>
     <form class="trial-form" id="trialForm">
-      <label>Your name<input name="name" required autocomplete="name"></label>
-      <label>Club / team<input name="club" required></label>
+      <label>Il tuo nome<input name="name" required autocomplete="name"></label>
+      <label>Club / squadra<input name="club" required></label>
       <label>Email<input name="email" type="email" required autocomplete="email"></label>
-      <label>WhatsApp (optional)<input name="phone" autocomplete="tel"></label>
-      <button type="submit" class="btn btn-primary">Get my free trial</button>
+      <label>WhatsApp (facoltativo)<input name="phone" autocomplete="tel"></label>
+      <button type="submit" class="btn btn-primary">Richiedi la prova gratuita</button>
       <div class="form-msg" id="trialMsg"></div>
     </form>
   </div>
@@ -316,50 +316,45 @@
 
 <section id="buy" class="alt"><div class="wrap">
   <div class="sec-head">
-    <h2>Start using it today</h2>
-    <p>Annual license for 2 computers. Your activation code arrives by email.</p>
+    <h2>Inizia a usarlo oggi</h2>
+    <p>Licenza annuale per 2 computer. Il codice di attivazione arriva via email.</p>
   </div>
   <div class="price-card">
-    <div class="plan">Annual license</div>
-    <!-- PRICE: edit the values here -->
+    <div class="plan">Licenza annuale</div>
     <div class="big"><span class="cur">$</span>19</div>
-    <div class="per">per year • 2 computers</div>
-    <div class="usd">Brazil: R$ 79,90/year via Pix or card</div>
+    <div class="per">all'anno • 2 computer</div>
+    <div class="usd">Pagamento sicuro tramite PayPal</div>
     <ul class="price-list">
-      <li>All display screens and the OBS overlay</li>
-      <li>Scouting software integration and phone scoreboard</li>
-      <li>Updates during your license period</li>
-      <li>Full guide in English and Portuguese</li>
+      <li>Tutte le schermate di visualizzazione e l'overlay OBS</li>
+      <li>Integrazione con il software di scouting e tabellone sul telefono</li>
+      <li>Aggiornamenti durante il periodo di licenza</li>
+      <li>Guida completa in inglese e portoghese</li>
     </ul>
     <div class="pay">
-      <!-- INTERNATIONAL PAYMENT: paste your PayPal link in href -->
-      <a class="btn pay-paypal" href="https://www.paypal.com/ncp/payment/XQFE8H2TDRNCC" target="_blank" rel="noopener" id="buy-pp">Pay with PayPal</a>
-      <div class="pay-sep">— or —</div>
-      <!-- BRAZIL PAYMENT: paste your Mercado Pago link in href -->
-      <a class="btn btn-primary" href="https://mpago.la/1dcXxaH" target="_blank" rel="noopener" id="buy-mp">Pay with Pix or card (Brazil)</a>
+      <a class="btn pay-paypal" href="https://www.paypal.com/ncp/payment/XQFE8H2TDRNCC" target="_blank" rel="noopener" id="buy-pp">Paga con PayPal</a>
     </div>
-    <p class="pay-note" style="margin-top:14px">Not sure yet? <a href="#trial">Try it free for 7 days</a> first.</p>
-    <p class="pay-note">After your payment is confirmed, you'll get your activation code by email (usually within a few hours). Questions? <a href="mailto:Felipeaplima@outlook.com">Contact us</a>.</p>
+    <p class="pay-note" style="margin-top:14px">Non sei ancora sicuro? <a href="#trial">Prova gratis per 7 giorni</a>.</p>
+    <p class="pay-note">Dopo la conferma del pagamento riceverai il codice di attivazione via email (di solito in poche ore). Domande? <a href="mailto:Felipeaplima@outlook.com">Scrivici</a>.</p>
   </div>
 </div></section>
 
 <section id="faq"><div class="wrap">
-  <div class="sec-head"><h2>Frequently asked questions</h2></div>
+  <div class="sec-head"><h2>Domande frequenti</h2></div>
   <div class="faq">
-    <details><summary>How does activation work?</summary><p>After you buy, you get a code by email. Open RadarStudio, enter the code on the activation screen and you're set — it's tied to that computer.</p></details>
-    <details><summary>Does it work offline?</summary><p>Yes. Once activated, the app runs without internet for several days; it revalidates your license automatically when you're back online.</p></details>
-    <details><summary>What equipment do I need?</summary><p>A Windows computer and a Pocket Radar Smart Coach. You can connect by USB cable, Bluetooth or network.</p></details>
-    <details><summary>How many computers can I use?</summary><p>Each license works on up to 2 computers — handy when you use one PC at the radar and another for scouting. Need more machines? Just add another license.</p></details>
-    <details><summary>What about renewal?</summary><p>The license lasts 1 year. Near expiry we'll remind you to renew and keep the app running.</p></details>
-    <details><summary>I changed computers, now what?</summary><p>No problem — just contact us and we'll release activation on the new machine.</p></details>
+    <details><summary>Come funziona l'attivazione?</summary><p>Dopo l'acquisto ricevi un codice via email. Apri RadarStudio, inserisci il codice nella schermata di attivazione ed è fatta — resta legato a quel computer.</p></details>
+    <details><summary>Funziona offline?</summary><p>Sì. Una volta attivato, l'app funziona senza internet per diversi giorni; riconvalida la licenza automaticamente quando torni online.</p></details>
+    <details><summary>Di che attrezzatura ho bisogno?</summary><p>Un computer Windows e un Pocket Radar Smart Coach. Puoi collegarlo via cavo USB, Bluetooth o rete.</p></details>
+    <details><summary>Su quanti computer posso usarlo?</summary><p>Ogni licenza funziona su un massimo di 2 computer — comodo quando usi un PC al radar e un altro per lo scouting. Ti servono più macchine? Aggiungi un'altra licenza.</p></details>
+    <details><summary>E il rinnovo?</summary><p>La licenza dura 1 anno. Verso la scadenza ti ricorderemo di rinnovare per tenere l'app attiva.</p></details>
+    <details><summary>Ho cambiato computer, e adesso?</summary><p>Nessun problema — scrivici e sblocchiamo l'attivazione sulla nuova macchina.</p></details>
   </div>
 </div></section>
 
 <footer><div class="wrap">
   <div>© <span id="yr"></span> RadarStudio</div>
   <div style="display:flex;gap:20px">
-    <a href="#buy">Buy</a>
-    <a href="mailto:Felipeaplima@outlook.com">Contact</a>
+    <a href="#buy">Acquista</a>
+    <a href="mailto:Felipeaplima@outlook.com">Contatti</a>
   </div>
 </div></footer>
 
@@ -376,8 +371,6 @@ function toggleTheme(){
 (function(){var d=document.documentElement.getAttribute('data-theme')==='dark';
   var b=document.getElementById('themeBtn'); if(b) b.textContent=d?'☀️':'🌙';})();
 
-/* Free-trial lead form -> Google Apps Script (same web app as the license).
-   Paste your Apps Script /exec URL below. */
 const LEAD_URL = "https://script.google.com/macros/s/AKfycbyA3xyihMXq6YxBr_FvYYmRnQhGn0FOfhtNi_G8Jolw5G8sjzZVjiKIWZeHUPv35vbEow/exec";
 const tf=document.getElementById('trialForm');
 if(tf) tf.addEventListener('submit',function(e){
@@ -386,17 +379,17 @@ if(tf) tf.addEventListener('submit',function(e){
   const btn=tf.querySelector('button[type=submit]');
   const fd=new FormData(tf);
   const payload=JSON.stringify({action:'lead',name:fd.get('name'),club:fd.get('club'),
-    email:fd.get('email'),phone:fd.get('phone'),lang:'en',ts:new Date().toISOString()});
+    email:fd.get('email'),phone:fd.get('phone'),lang:'it',ts:new Date().toISOString()});
   if(!LEAD_URL||LEAD_URL.indexOf('PASTE_')===0){
-    msg.className='form-msg err'; msg.textContent='Form not configured yet.'; return; }
-  btn.disabled=true; btn.textContent='Sending…'; msg.className='form-msg'; msg.textContent='';
+    msg.className='form-msg err'; msg.textContent='Modulo non ancora configurato.'; return; }
+  btn.disabled=true; btn.textContent='Invio…'; msg.className='form-msg'; msg.textContent='';
   fetch(LEAD_URL,{method:'POST',mode:'no-cors',
     headers:{'Content-Type':'text/plain;charset=utf-8'},body:payload})
     .then(()=>{ msg.className='form-msg ok';
-      msg.textContent="Thanks! We'll email your 7-day code shortly."; tf.reset(); })
+      msg.textContent='Grazie! Ti invieremo a breve il codice di 7 giorni.'; tf.reset(); })
     .catch(()=>{ msg.className='form-msg err';
-      msg.textContent='Something went wrong — email Felipeaplima@outlook.com.'; })
-    .finally(()=>{ btn.disabled=false; btn.textContent='Get my free trial'; });
+      msg.textContent='Qualcosa è andato storto — scrivi a Felipeaplima@outlook.com.'; })
+    .finally(()=>{ btn.disabled=false; btn.textContent='Richiedi la prova gratuita'; });
 });
 </script>
 </body>
