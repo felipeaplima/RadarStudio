@@ -2,6 +2,12 @@
 
 All notable changes to RadarStudio.
 
+## 1.7 — 2026-10-10
+
+- **Display font size.** A size slider for the central display, right next to the layout picker.
+- **Phone scoreboard — last speeds.** The 📱 Phone view can now show the last serve speeds (below or beside the number). Pick the layout — and whether it follows the panel's colors — in the 📱 Phone dialog.
+- **"Receiving from phone" status.** The header shows when serve speeds are coming in over the network from a phone.
+
 ## 1.6 — 2026-10-09
 
 - **New "Hall" overlay.** A "Last serve: XXX km/h" overlay card for OBS (📺 Hall button) that uses your chosen colors (Text/Bg), with the label in uppercase. Two styles — **horizontal** (single line) or **vertical** (big number) — in English, Portuguese and Italian. Pick the style and language in the pop-up and copy the URL.
