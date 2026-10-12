@@ -2,6 +2,13 @@
 
 All notable changes to RadarStudio.
 
+## 1.8 — 2026-10-12
+
+- **Auto-detect clock offset.** In DV/VS Sync, tick **🔍 auto-detect** and it finds the offset by matching your serves to the readings — handy when the radar CSV comes from a phone on a slightly different clock.
+- **Edit or drop any serve.** In the preview you can now type any speed, or **🗑** drop a serve (e.g. one marked out of time) so no speed is written for it.
+- **Phone CSV syncs directly.** DV/VS Sync reads the RadarStudio Bridge CSV (date, time, km/h, mph) as a radar source, for when a phone was the capture.
+- **Live clock difference.** When a phone is pushing speeds, DV/VS Sync shows the measured phone↔PC clock difference (📡) so you can apply it as the offset in one click.
+
 ## 1.7 — 2026-10-10
 
 - **Display font size.** A size slider for the central display, right next to the layout picker.
