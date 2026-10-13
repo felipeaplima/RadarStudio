@@ -2,6 +2,11 @@
 
 All notable changes to RadarStudio.
 
+## 1.9 — 2026-10-13
+
+- **Speed on video.** A new page burns each serve's speed into your match video — a short serves reel or the full game. The video must be on this PC; ffmpeg downloads itself on first use.
+- **Share on the internet.** In the Hall overlay you can share the "Last serve" badge over the internet, so a remote OBS — or any screen with a connection — shows the live speed. One click, no router setup.
+
 ## 1.8 — 2026-10-12
 
 - **Auto-detect clock offset.** In DV/VS Sync, tick **🔍 auto-detect** and it finds the offset by matching your serves to the readings — handy when the radar CSV comes from a phone on a slightly different clock.
